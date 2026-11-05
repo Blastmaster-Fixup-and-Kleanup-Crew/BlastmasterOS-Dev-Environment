@@ -37,7 +37,7 @@ rs_sourcedir="$rs_scriptdir/sources"
 
 # RosBE-Unix Constants
 DEFAULT_INSTALL_DIR="/usr/local/RosBE"
-ROSBE_VERSION="2.2.1"
+ROSBE_VERSION="1.0.67"
 TARGET_ARCH="i386"
 
 source "$rs_scriptdir/scripts/rosbelibrary.sh"
@@ -45,16 +45,16 @@ source "$rs_scriptdir/scripts/setuplibrary.sh"
 
 
 echo "*******************************************************************************"
-echo "*         ReactOS Build Environment for Unix-based Operating Systems          *"
+echo "*       BlastmasterOS Dev Environment for Unix-based Operating Systems        *"
 echo "*                      Builder Tool for the Base package                      *"
-echo "*                      by Colin Finck <colin@reactos.org>                     *"
+echo "*                    by Joey Gagnon <win7.joey@outlook.com>                   *"
 echo "*                                                                             *"
-echo "*                                 Version $ROSBE_VERSION                               *"
+echo "*                            Version $ROSBE_VERSION                           *"
 echo "*******************************************************************************"
 
 echo
 echo "This script compiles and installs a complete Build Environment for building"
-echo "ReactOS."
+echo "BlastmasterOS."
 echo
 
 if [ "$1" = "-h" ] || [ "$1" = "-?" ] || [ "$1" = "--help" ]; then
@@ -110,7 +110,7 @@ if [ "$1" = "" ]; then
 			if [ ! "`ls $installdir`" = "" ]; then
 				if [ -f "$installdir/RosBE-Version" ]; then
 					installed_version=`cat "$installdir/RosBE-Version"`
-					echo "ReactOS Build Environment $installed_version is already installed in this directory."
+					echo "BlastmasterOS Dev Environment $installed_version is already installed in this directory."
 				else
 					echo "The directory \"$installdir\" is not empty."
 				fi
@@ -133,7 +133,7 @@ if [ "$1" = "" ]; then
 	# Ready to start
 	rs_boldmsg "Ready to start"
 
-	echo "Ready to build and install the ReactOS Build Environment."
+	echo "Ready to build and install the BlastmasterOS Dev Environment."
 	echo "Press Return to continue or Ctrl+C to exit."
 	read
 else
