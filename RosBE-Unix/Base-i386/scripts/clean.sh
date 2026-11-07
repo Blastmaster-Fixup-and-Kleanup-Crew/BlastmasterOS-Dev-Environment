@@ -7,13 +7,13 @@
 if [ -z "${BLASTMASTEROS_BUILD_DIR:-}" ]; then
     echo "ERROR: BLASTMASTEROS_BUILD_DIR is not set."
     echo "Activate the environment or set it to the BlastmasterOS CMake build directory."
-    return 1
+    exit 1
 fi
 
 if [ ! -f "$BLASTMASTEROS_BUILD_DIR/CMakeCache.txt" ]; then
     echo "ERROR: No configured BlastmasterOS CMake build directory found at:"
     echo "  $BLASTMASTEROS_BUILD_DIR"
-    return 1
+    exit 1
 fi
 
 echo "Cleaning BlastmasterOS build outputs..."
