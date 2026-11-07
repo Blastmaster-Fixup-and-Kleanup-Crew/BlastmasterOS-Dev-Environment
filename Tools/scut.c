@@ -2,7 +2,7 @@
  * PROJECT:     RosBE - BlastmasterOS Dev Environment for Windows.
  * LICENSE:     GNU General Public License v2. (see LICENSE.txt)
  * FILE:        Tools/scut.c
- * PURPOSE:     Manages named shortcuts to ReactOS source directories.
+ * PURPOSE:     Manages named shortcuts to BlastmasterOS source directories.
  * COPYRIGHT:   Copyright 2026 Peter Ward <dralnix@gmail.com>
  *                             Daniel Reimer <reimer.daniel@freenet.de>
  *                             Colin Finck <mail@colinfinck.de>
@@ -118,7 +118,7 @@ int main(int argc, char* argv[])
              (!pstricmp(argv[1], "--help")))
     {
         printf("Usage: %s [OPTIONS] [SHORTCUT] [PATH]\n", programname);
-        printf("Manages named shortcuts to ReactOS source directories. scut started\n");
+        printf("Manages named shortcuts to BlastmasterOS source directories. scut started\n");
         printf("with the name of a shortcut sets this shortcut active.\n\n");
         printf("The following details the options:\n\n");
         printf("   list    - Lists all shortcuts and their paths.\n");

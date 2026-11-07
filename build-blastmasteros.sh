@@ -37,7 +37,8 @@ command -v ninja >/dev/null 2>&1 || {
     exit 1
 }
 
-BUILD_DIR="$DEV_ENV_DIR/build/BlastmasterOS"
+BUILD_DIR=${BLASTMASTEROS_BUILD_DIR:-"$DEV_ENV_DIR/build/BlastmasterOS"}
+export BLASTMASTEROS_BUILD_DIR="$BUILD_DIR"
 mkdir -p "$BUILD_DIR"
 cd "$BUILD_DIR"
 

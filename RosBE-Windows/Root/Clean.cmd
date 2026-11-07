@@ -17,7 +17,7 @@ if %_ROSBE_DEBUG% == 1 (
 setlocal enabledelayedexpansion
 title Cleaning...
 
-set ROS_CMAKE_BUILD=output-%BUILD_ENVIRONMENT%-%ROS_ARCH%
+set ROS_CMAKE_BUILD=%BLASTMASTEROS_BUILD_DIR%
 
 if "%1" == "" (
     call :BIN
@@ -51,7 +51,7 @@ goto :EOF
 
 :: Check if we have any binaries to clean, if so, clean them.
 :BIN
-:: Do some basic sanity checks to verify that we are working in a ReactOS source tree.
+:: Clean the configured BlastmasterOS CMake build directory.
 :: Consider that we also want to clean half-complete builds, so don't depend on too many existing files.
 
 if exist "CMakeLists.txt" (

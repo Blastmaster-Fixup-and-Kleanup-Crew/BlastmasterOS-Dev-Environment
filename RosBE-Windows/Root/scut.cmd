@@ -30,6 +30,7 @@ for /f "usebackq tokens=*" %%i in (`"scut.exe %*"`) do (
         if exist "%%i\." (
             cd /d %%i
             set _ROSBE_ROSSOURCEDIR=%%i
+            set BLASTMASTEROS_SOURCE_DIR=%%i
         )
     )
 )

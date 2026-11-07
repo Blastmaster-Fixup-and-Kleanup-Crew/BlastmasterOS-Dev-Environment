@@ -36,7 +36,7 @@ function end {
     exit
 }
 
-$ENV:ROS_CMAKE_BUILD = "output-$BUILD_ENVIRONMENT-$ENV:ROS_ARCH"
+$ENV:ROS_CMAKE_BUILD = $ENV:BLASTMASTEROS_BUILD_DIR
 
 if ("$args" -eq "") {
     rembin

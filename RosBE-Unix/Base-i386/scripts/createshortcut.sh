@@ -24,9 +24,9 @@ source "$SCRIPTDIR/setuplibrary.sh"
 ROSBE_VERSION=`cat "$SCRIPTDIR/RosBE-Version"`
 
 # Select the source directory
-rs_boldmsg "ReactOS Source Directory"
+rs_boldmsg "BlastmasterOS Source Directory"
 
-echo "Enter the directory where the ReactOS sources are located."
+echo "Enter the directory where the BlastmasterOS sources are located."
 echo "This directory will become the current directory, when you start the Build Environment."
 
 sourcedir=""
@@ -37,7 +37,7 @@ while [ "$sourcedir" = "" ]; do
 	sourcedir=`eval echo $sourcedir`
 
 	if ! [ -d "$sourcedir" ]; then
-		echo "The entered path is no directory. Please enter the right path to the ReactOS sources."
+		echo "The entered path is no directory. Please enter the right path to the BlastmasterOS sources."
 		sourcedir=""
 	fi
 

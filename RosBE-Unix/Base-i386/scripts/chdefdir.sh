@@ -14,4 +14,5 @@ if [ "$1" = "" ]; then
 fi
 
 export _ROSBE_ROSSOURCEDIR="$1"
+export BLASTMASTEROS_SOURCE_DIR="$_ROSBE_ROSSOURCEDIR"
 basedir

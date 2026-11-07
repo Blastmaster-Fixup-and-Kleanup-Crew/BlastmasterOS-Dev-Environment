@@ -79,9 +79,9 @@ FunctionEnd
 !insertmacro MUI_PAGE_DIRECTORY
 
 ;;
-;; ReactOS Source Directory Pages
+;; BlastmasterOS Source Directory Pages
 ;;
-var REACTOS_SOURCE_DIRECTORY
+var BLASTMASTEROS_SOURCE_DIRECTORY
 !insertmacro CUSTOM_PAGE_ROSDIRECTORY
 
 ;;
@@ -255,7 +255,7 @@ Section -StartMenuShortcuts SEC06
     ;;
     !insertmacro MUI_STARTMENU_WRITE_BEGIN Application
         CreateDirectory "$SMPROGRAMS\$ICONS_GROUP"
-        SetOutPath $REACTOS_SOURCE_DIRECTORY
+        SetOutPath $BLASTMASTEROS_SOURCE_DIRECTORY
         IfFileExists "$INSTDIR\RosBE.cmd" 0 +2
             CreateShortCut "$SMPROGRAMS\$ICONS_GROUP\BlastmasterOS Dev Environment ${PRODUCT_VERSION}.lnk" "$SYSDIR\cmd.exe" '/t:0A /k "$INSTDIR\RosBE.cmd"' "$INSTDIR\rosbe.ico"
         IfFileExists "$INSTDIR\RosBE.ps1" 0 +2
@@ -280,7 +280,7 @@ Section /o "Desktop Shortcuts" SEC07
     ;;
     ;; Add our desktop shortcuts.
     ;;
-    SetOutPath $REACTOS_SOURCE_DIRECTORY
+    SetOutPath $BLASTMASTEROS_SOURCE_DIRECTORY
     IfFileExists "$INSTDIR\RosBE.cmd" 0 +2
         CreateShortCut "$DESKTOP\BlastmasterOS Dev Environment ${PRODUCT_VERSION}.lnk" "$SYSDIR\cmd.exe" '/t:0A /k "$INSTDIR\RosBE.cmd"' "$INSTDIR\rosbe.ico"
     IfFileExists "$INSTDIR\RosBE.ps1" 0 +2
@@ -297,7 +297,7 @@ Section /o "Quick Launch Shortcuts" SEC08
     ;;
     ;; Add our quick launch shortcuts.
     ;;
-    SetOutPath $REACTOS_SOURCE_DIRECTORY
+    SetOutPath $BLASTMASTEROS_SOURCE_DIRECTORY
     IfFileExists "$INSTDIR\RosBE.cmd" 0 +2
         CreateShortCut "$QUICKLAUNCH\BlastmasterOS Dev Environment ${PRODUCT_VERSION}.lnk" "$SYSDIR\cmd.exe" '/t:0A /k "$INSTDIR\RosBE.cmd"' "$INSTDIR\rosbe.ico"
     IfFileExists "$INSTDIR\RosBE.ps1" 0 +2

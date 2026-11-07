@@ -28,5 +28,6 @@ if ("$SOURCEDIR" -eq "previous") {
 }
 
 $global:_ROSBE_ROSSOURCEDIR = "$pwd"
+$ENV:BLASTMASTEROS_SOURCE_DIR = "$_ROSBE_ROSSOURCEDIR"
 $host.ui.RawUI.WindowTitle = "BlastmasterOS Dev Environment $_ROSBE_VERSION"
 set-location "$_ROSBE_ROSSOURCEDIR"

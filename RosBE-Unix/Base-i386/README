@@ -5,14 +5,14 @@
 Introduction
 -------------
   The BlastmasterOS Dev Environment ("RosBE") is the official build environment
-for compiling ReactOS. This version is targeted at Unix-based operating systems
+for compiling BlastmasterOS. This version is targeted at Unix-based operating systems
 such as Linux, FreeBSD or macOS.
   The installation process is divided into two parts: First a script builds and
 installs the needed compiler tools for your operating system. Therefore you need
 the "gcc" compiler for your system and some other build tools.
   Afterwards, you can create a desktop shortcut using another script. This
 shortcut opens a Terminal window and prepares all environment settings for
-building ReactOS.
+building BlastmasterOS.
 
 
 Needed Applications and Libraries
@@ -71,7 +71,7 @@ operating system:
   3. Call the "createshortcut.sh" script in the installation directory (usually
      "/usr/local/RosBE") to create a desktop shortcut for the Build Environment.
 
-  Afterwards, you can easily open a Build Environment for ReactOS by clicking
+  Afterwards, you can easily open a Build Environment for BlastmasterOS by clicking
 the shortcut.
 
 

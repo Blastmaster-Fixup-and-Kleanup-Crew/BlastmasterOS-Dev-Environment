@@ -43,5 +43,5 @@ if /i "%SOURCEDIR%" == "previous" (
 
 :EOC
 title BlastmasterOS Dev Environment %_ROSBE_VERSION%
-endlocal & set _ROSBE_ROSSOURCEDIR=%CD%
+endlocal & set _ROSBE_ROSSOURCEDIR=%CD% & set BLASTMASTEROS_SOURCE_DIR=%CD%
 cd /d %_ROSBE_ROSSOURCEDIR%

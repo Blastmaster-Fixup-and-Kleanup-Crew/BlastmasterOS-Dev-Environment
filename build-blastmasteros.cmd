@@ -39,7 +39,12 @@ if errorlevel 1 (
     exit /b 1
 )
 
-set "BUILD_DIR=%DEV_ENV_DIR%build\BlastmasterOS"
+if defined BLASTMASTEROS_BUILD_DIR (
+    set "BUILD_DIR=%BLASTMASTEROS_BUILD_DIR%"
+) else (
+    set "BUILD_DIR=%DEV_ENV_DIR%build\BlastmasterOS"
+)
+set "BLASTMASTEROS_BUILD_DIR=%BUILD_DIR%"
 if not exist "%BUILD_DIR%" mkdir "%BUILD_DIR%"
 if errorlevel 1 (
     echo ERROR: Could not create build directory "%BUILD_DIR%".
