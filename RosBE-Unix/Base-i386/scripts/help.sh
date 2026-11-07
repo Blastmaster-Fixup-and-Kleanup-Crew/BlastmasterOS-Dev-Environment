@@ -13,7 +13,7 @@ echo " charch [OPTIONS]   - Change the target architecture for building Blastmas
 echo "                      for the current RosBE session."
 echo " chdefdir [OPTIONS] - Change the BlastmasterOS source directory for the"
 echo "                      current RosBE session."
-echo " clean              - Completely clean the BlastmasterOS source directory."
+echo " clean              - Clean generated BlastmasterOS build outputs."
 echo " help               - Show this help."
 echo " scut [OPTIONS]     - Manage shortcuts to multiple BlastmasterOS source directories."
 echo " version            - Show information about the toolchain versions."

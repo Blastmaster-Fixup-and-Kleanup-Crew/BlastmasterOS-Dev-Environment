@@ -33,7 +33,7 @@ if ("$args" -eq "") {
         "                           for the current RosBE session."
     }
 
-    "    clean [OPTIONS]      - Clean the configured BlastmasterOS CMake build outputs and/or the"
+    "    clean [all|logs]     - Clean BlastmasterOS CMake build outputs or RosBE logs."
     "                           RosBE build logs."
 
     "    help [COMMAND]       - Display the available commands or give help on a"
