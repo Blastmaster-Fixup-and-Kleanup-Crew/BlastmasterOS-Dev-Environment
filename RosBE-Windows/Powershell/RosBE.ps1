@@ -3,7 +3,7 @@
 # LICENSE:     GNU General Public License v2. (see LICENSE.txt)
 # FILE:        Root/RosBE.ps1
 # PURPOSE:     This script provides/sets up various build environments for
-#              ReactOS. Currently it provides a GCC 13.2.0 build environment.
+#              BlastmasterOS. Currently it provides a GCC 13.2.0 build environment.
 # COPYRIGHT:   Copyright 2026 Daniel Reimer <reimer.daniel@freenet.de>
 #
 
@@ -55,6 +55,10 @@ $global:_ROSBE_BASEDIR = [System.IO.Path]::GetDirectoryName($0)
 $global:_ROSBE_PREFIX = $null
 $global:_ROSBE_VERSION = "2.3.0"
 $global:_ROSBE_ROSSOURCEDIR = "$pwd"
+$ENV:BLASTMASTEROS_SOURCE_DIR = "$_ROSBE_ROSSOURCEDIR"
+if (-not $ENV:BLASTMASTEROS_BUILD_DIR) {
+    $ENV:BLASTMASTEROS_BUILD_DIR = [System.IO.Path]::GetFullPath((Join-Path "$_ROSBE_ROSSOURCEDIR" "..\BlastmasterOS-Dev-Environment\build\BlastmasterOS"))
+}
 $global:_ROSBE_SHOWTIME = 1
 $global:_ROSBE_WRITELOG = 1
 $global:_ROSBE_USECCACHE = 0
@@ -227,7 +231,7 @@ if ($_ROSBE_SHOWVERSION -eq 1) {
 "-------------------------------------------------"
 ""
 
-# Look if the ReactOS source directory is empty.
+# Look if the BlastmasterOS source directory is empty.
 if ((get-childitem $_ROSBE_ROSSOURCEDIR).Count -le 0) {
-    "No ReactOS source detected. Please check https://reactos.org/wiki/ReactOS_Git_For_Dummies to download it."
+    "No BlastmasterOS source detected. Please check https://reactos.org/wiki/BlastmasterOS_Git_For_Dummies to download it."
 }

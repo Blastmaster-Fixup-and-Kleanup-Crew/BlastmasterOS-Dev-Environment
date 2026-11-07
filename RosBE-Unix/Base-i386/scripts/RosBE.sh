@@ -6,8 +6,12 @@
 #
 # Released under GNU GPL v2 or any later version.
 
-# Save the ReactOS source directory
+# Save the BlastmasterOS source directory
 export _ROSBE_ROSSOURCEDIR="${1:-$PWD}"
+export BLASTMASTEROS_SOURCE_DIR="$_ROSBE_ROSSOURCEDIR"
+if [ -z "${BLASTMASTEROS_BUILD_DIR:-}" ]; then
+    export BLASTMASTEROS_BUILD_DIR="$(dirname "$_ROSBE_ROSSOURCEDIR")/BlastmasterOS-Dev-Environment/build/BlastmasterOS"
+fi
 
 # Get the absolute path to the script directory
 cd `dirname $0`

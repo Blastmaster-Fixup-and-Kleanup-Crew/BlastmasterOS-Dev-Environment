@@ -2,7 +2,7 @@
 :: PROJECT:     RosBE - BlastmasterOS Dev Environment for Windows
 :: LICENSE:     GNU General Public License v2. (see LICENSE.txt)
 :: FILE:        Root/Clean.cmd
-:: PURPOSE:     Clean the ReactOS source directory.
+:: PURPOSE:     Clean generated BlastmasterOS build outputs.
 :: COPYRIGHT:   Copyright 2026 Daniel Reimer <reimer.daniel@freenet.de>
 ::                             Peter Ward <dralnix@gmail.com>
 ::                             Colin Finck <colin@reactos.org>
@@ -54,12 +54,13 @@ goto :EOF
 :: Clean the configured BlastmasterOS CMake build directory.
 :: Consider that we also want to clean half-complete builds, so don't depend on too many existing files.
 
-if exist "CMakeLists.txt" (
-    echo Cleaning ReactOS %ROS_ARCH% source directory...
-    rd /s /q "%ROS_CMAKE_BUILD%" 1>NUL 2>NUL
-    echo Done cleaning ReactOS %ROS_ARCH% source directory.
+if not "%ROS_CMAKE_BUILD%" == "" if exist "%ROS_CMAKE_BUILD%\CMakeCache.txt" (
+    echo Cleaning BlastmasterOS build outputs...
+    cmake --build "%ROS_CMAKE_BUILD%" --target clean
+    if errorlevel 1 echo ERROR: BlastmasterOS clean failed.
 ) else (
-    echo ERROR: This directory contains no %ROS_ARCH% compiler output to clean.
+    echo ERROR: BlastmasterOS CMake build directory was not found.
+    echo Set BLASTMASTEROS_BUILD_DIR or run build-blastmasteros.cmd first.
 )
 goto :EOF
 

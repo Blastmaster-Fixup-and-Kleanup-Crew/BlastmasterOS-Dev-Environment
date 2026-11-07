@@ -2,7 +2,7 @@
 # PROJECT:     RosBE - BlastmasterOS Dev Environment for Windows
 # LICENSE:     GNU General Public License v2. (see LICENSE.txt)
 # FILE:        Root/Clean.ps1
-# PURPOSE:     Clean the ReactOS source directory.
+# PURPOSE:     Clean generated BlastmasterOS build outputs.
 # COPYRIGHT:   Copyright 2026 Daniel Reimer <reimer.daniel@freenet.de>
 #
 
@@ -22,12 +22,12 @@ function remlog {
 function rembin {
     # Check if we have any binaries to clean, if so, clean them.
 
-    if (Test-Path "CMakeLists.txt") {
-        "Cleaning ReactOS $ENV:ROS_ARCH source directory..."
-        $null = (Remove-Item "$ENV:ROS_CMAKE_BUILD" -recurse -force)
-        "Done cleaning ReactOS $ENV:ROS_ARCH source directory."
+    if ($ENV:ROS_CMAKE_BUILD -and (Test-Path (Join-Path $ENV:ROS_CMAKE_BUILD "CMakeCache.txt"))) {
+        "Cleaning BlastmasterOS build outputs..."
+        cmake --build "$ENV:ROS_CMAKE_BUILD" --target clean
+        if ($LASTEXITCODE -ne 0) { throw "ERROR: BlastmasterOS clean failed." }
     } else {
-        throw {"ERROR: This directory contains no $ENV:ROS_ARCH compiler output to clean."}
+        throw "ERROR: BlastmasterOS CMake build directory was not found. Set BLASTMASTEROS_BUILD_DIR or run build-blastmasteros first."
     }
 }
 

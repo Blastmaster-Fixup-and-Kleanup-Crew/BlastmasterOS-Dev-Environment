@@ -2,18 +2,18 @@
 # PROJECT:     RosBE - BlastmasterOS Dev Environment for Windows
 # LICENSE:     GNU General Public License v2. (see LICENSE.txt)
 # FILE:        Root/chdefdir.ps1
-# PURPOSE:     Tool to change the current working ReactOS source directory
+# PURPOSE:     Tool to change the current working BlastmasterOS source directory
 #              in RosBE.
 # COPYRIGHT:   Copyright 2026 Daniel Reimer <reimer.daniel@freenet.de>
 #
 
-$host.ui.RawUI.WindowTitle = "Change the current working ReactOS source directory..."
+$host.ui.RawUI.WindowTitle = "Change the current working BlastmasterOS source directory..."
 
 # Parse the command line arguments.
 if ($args.count -eq 0) {
-    $SOURCEDIR = Read-Host "Please enter a ReactOS source directory, or 'previous': "
+    $SOURCEDIR = Read-Host "Please enter a BlastmasterOS source directory, or 'previous': "
     if ($SOURCEDIR.length -eq 0) {
-        throw {"ERROR: You must enter a ReactOS source directory, or 'previous'."}
+        throw {"ERROR: You must enter a BlastmasterOS source directory, or 'previous'."}
     }
 } else {
     $SOURCEDIR = $args

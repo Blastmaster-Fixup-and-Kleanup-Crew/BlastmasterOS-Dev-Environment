@@ -3,7 +3,7 @@
 :: LICENSE:     GNU General Public License v2. (see LICENSE.txt)
 :: FILE:        Root/RosBE.cmd
 :: PURPOSE:     This script provides/sets up various build environments for
-::              ReactOS. Currently it provides a GCC 13.2.0 build environment.
+::              BlastmasterOS. Currently it provides a GCC 13.2.0 build environment.
 :: COPYRIGHT:   Copyright 2026 Daniel Reimer <reimer.daniel@freenet.de>
 ::                             Peter Ward <dralnix@gmail.com>
 ::                             Colin Finck <colin@reactos.org>
@@ -77,6 +77,10 @@ set _ROSBE_BASEDIR=%~dp0
 set _ROSBE_BASEDIR=%_ROSBE_BASEDIR:~0,-1%
 set _ROSBE_VERSION=2.3.0
 set _ROSBE_ROSSOURCEDIR=%CD%
+set BLASTMASTEROS_SOURCE_DIR=%_ROSBE_ROSSOURCEDIR%
+if not defined BLASTMASTEROS_BUILD_DIR (
+    for %%I in ("%_ROSBE_ROSSOURCEDIR%\..\BlastmasterOS-Dev-Environment\build\BlastmasterOS") do set "BLASTMASTEROS_BUILD_DIR=%%~fI"
+)
 set _ROSBE_SHOWTIME=1
 set _ROSBE_WRITELOG=1
 set _ROSBE_USECCACHE=0
@@ -172,10 +176,10 @@ echo For a list of all included commands, type: "help"
 echo -------------------------------------------------
 echo.
 
-:: Look if the ReactOS source directory is empty.
+:: Look if the BlastmasterOS source directory is empty.
 setlocal enabledelayedexpansion
 dir /b "%_ROSBE_ROSSOURCEDIR%" 2>nul | findstr "." >nul
 if !errorlevel! == 1 (
-    echo No ReactOS source detected. Please check https://reactos.org/wiki/ReactOS_Git_For_Dummies to download it.
+    echo No BlastmasterOS source detected. Clone https://github.com/Blastmaster-Fixup-and-Kleanup-Crew/BlastmasterOS and select the source directory with chdefdir.
 )
 endlocal
