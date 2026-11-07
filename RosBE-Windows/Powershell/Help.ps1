@@ -111,7 +111,7 @@ if ("$args" -eq "") {
         "    ""Type"" - Set it to ""target"" or ""host"""
     }
 } elseif ("$args" -eq "clean") {
-    " Usage: clean [logs]"
+    " Usage: clean [all|logs]"
     " Runs CMake clean in the configured BlastmasterOS build directory."
     ""
     "    all  - Same as clean."

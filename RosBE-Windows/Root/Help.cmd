@@ -41,7 +41,7 @@ if "%1" == "" (
         echo                           for the current RosBE session.
     )
 
-    echo    clean [OPTIONS]      - Clean the configured BlastmasterOS CMake build outputs and/or the
+    echo    clean [all^|logs]     - Clean BlastmasterOS CMake build outputs or RosBE logs.
     echo                           RosBE build logs.
 
     echo    help [COMMAND]       - Display the available commands or give help on a
@@ -118,7 +118,7 @@ if "%1" == "" (
         echo    "Type" - Set it to "target" or "host"
     )
 ) else if /i "%1" == "clean" (
-    echo Usage: clean [logs]
+    echo Usage: clean [all^|logs]
     echo Runs CMake clean in the configured BlastmasterOS build directory.
     echo.
     echo    all  - Same as clean.

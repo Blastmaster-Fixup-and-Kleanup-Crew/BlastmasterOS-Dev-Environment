@@ -57,7 +57,10 @@ $global:_ROSBE_VERSION = "2.3.0"
 $global:_ROSBE_ROSSOURCEDIR = "$pwd"
 $ENV:BLASTMASTEROS_SOURCE_DIR = "$_ROSBE_ROSSOURCEDIR"
 if (-not $ENV:BLASTMASTEROS_BUILD_DIR) {
-    $ENV:BLASTMASTEROS_BUILD_DIR = [System.IO.Path]::GetFullPath((Join-Path "$_ROSBE_ROSSOURCEDIR" "..\BlastmasterOS-Dev-Environment\build\BlastmasterOS"))
+    $devEnvDir = [System.IO.Path]::GetFullPath((Join-Path "$_ROSBE_ROSSOURCEDIR" "..\BlastmasterOS-Dev-Environment"))
+    if (Test-Path (Join-Path $devEnvDir "build-blastmasteros.cmd")) {
+        $ENV:BLASTMASTEROS_BUILD_DIR = Join-Path $devEnvDir "build\BlastmasterOS"
+    }
 }
 $global:_ROSBE_SHOWTIME = 1
 $global:_ROSBE_WRITELOG = 1

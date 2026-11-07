@@ -79,7 +79,8 @@ set _ROSBE_VERSION=2.3.0
 set _ROSBE_ROSSOURCEDIR=%CD%
 set BLASTMASTEROS_SOURCE_DIR=%_ROSBE_ROSSOURCEDIR%
 if not defined BLASTMASTEROS_BUILD_DIR (
-    for %%I in ("%_ROSBE_ROSSOURCEDIR%\..\BlastmasterOS-Dev-Environment\build\BlastmasterOS") do set "BLASTMASTEROS_BUILD_DIR=%%~fI"
+    for %%I in ("%_ROSBE_ROSSOURCEDIR%\..\BlastmasterOS-Dev-Environment") do set "_ROSBE_DEV_ENV_DIR=%%~fI"
+    if exist "%_ROSBE_DEV_ENV_DIR%\build-blastmasteros.cmd" set "BLASTMASTEROS_BUILD_DIR=%_ROSBE_DEV_ENV_DIR%\build\BlastmasterOS"
 )
 set _ROSBE_SHOWTIME=1
 set _ROSBE_WRITELOG=1

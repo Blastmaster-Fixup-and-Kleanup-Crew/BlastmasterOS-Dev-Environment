@@ -10,7 +10,10 @@
 export _ROSBE_ROSSOURCEDIR="${1:-$PWD}"
 export BLASTMASTEROS_SOURCE_DIR="$_ROSBE_ROSSOURCEDIR"
 if [ -z "${BLASTMASTEROS_BUILD_DIR:-}" ]; then
-    export BLASTMASTEROS_BUILD_DIR="$(dirname "$_ROSBE_ROSSOURCEDIR")/BlastmasterOS-Dev-Environment/build/BlastmasterOS"
+    _rosbe_dev_env_dir="$(dirname "$_ROSBE_ROSSOURCEDIR")/BlastmasterOS-Dev-Environment"
+    if [ -f "$_rosbe_dev_env_dir/build-blastmasteros.sh" ]; then
+        export BLASTMASTEROS_BUILD_DIR="$_rosbe_dev_env_dir/build/BlastmasterOS"
+    fi
 fi
 
 # Get the absolute path to the script directory

@@ -7,7 +7,7 @@
 # Released under GPL-2.0-or-later (https://spdx.org/licenses/GPL-2.0-or-later)
 
 if [ "$1" = "" ]; then
-	echo "charch: Changes the target architecture for building ReactOS."
+	echo "charch: Changes the target architecture for building BlastmasterOS."
 	echo "The appropriate build tools for this architecture need to be installed by a"
 	echo "RosBE-Unix package."
 	echo
