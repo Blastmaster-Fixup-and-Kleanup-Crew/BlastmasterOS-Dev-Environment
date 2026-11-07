@@ -1,4 +1,4 @@
-# BlastmasterOS Development Environment
+# BlastmasterOS Dev Environment
 
 This repository provides the Windows and Unix build-environment components used to compile **BlastmasterOS**.
 
