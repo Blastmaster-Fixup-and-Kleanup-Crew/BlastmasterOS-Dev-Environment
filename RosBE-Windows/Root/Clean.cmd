@@ -54,7 +54,8 @@ goto :EOF
 :: Clean the configured BlastmasterOS CMake build directory.
 :: Consider that we also want to clean half-complete builds, so don't depend on too many existing files.
 
-if not "%ROS_CMAKE_BUILD%" == "" if exist "%ROS_CMAKE_BUILD%\CMakeCache.txt" (
+if "%ROS_CMAKE_BUILD%" == "" goto :NOBUILD
+if exist "%ROS_CMAKE_BUILD%\CMakeCache.txt" (
     echo Cleaning BlastmasterOS build outputs...
     cmake --build "%ROS_CMAKE_BUILD%" --target clean
     if errorlevel 1 echo ERROR: BlastmasterOS clean failed.
@@ -62,6 +63,11 @@ if not "%ROS_CMAKE_BUILD%" == "" if exist "%ROS_CMAKE_BUILD%\CMakeCache.txt" (
     echo ERROR: BlastmasterOS CMake build directory was not found.
     echo Set BLASTMASTEROS_BUILD_DIR or run build-blastmasteros.cmd first.
 )
+goto :EOF
+
+:NOBUILD
+echo ERROR: BLASTMASTEROS_BUILD_DIR is not set.
+echo Set it to the configured BlastmasterOS CMake build directory.
 goto :EOF
 
 :EOC

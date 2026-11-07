@@ -60,7 +60,7 @@ echo 'THISDIR=`dirname $0`' >> "$idir"/rosbe
 echo export PATH='"$THISDIR/ovr:$THISDIR/bin:$PATH"' >> "$idir"/rosbe
 echo export 'INSTALLDIR="$THISDIR"' >> "$idir"/rosbe
 echo export OLDMAKE=`which make` >> "$idir"/rosbe
-echo echo "\"Run make in your reactos dir to build\"" >> "$idir"/rosbe
+echo echo "\"Run make in your BlastmasterOS source/build directory\"" >> "$idir"/rosbe
 echo exec $SHELL >> "$idir"/rosbe
 chmod +x "$idir"/rosbe
 echo Run "\"$idir/rosbe\"" to get a shell with the right settings

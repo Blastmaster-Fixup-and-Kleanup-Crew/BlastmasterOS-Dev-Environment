@@ -17,5 +17,5 @@ alias help="$_ROSBE_ROSSCRIPTDIR/help.sh"
 alias scut="source $_ROSBE_ROSSCRIPTDIR/scut.sh"
 alias version="$_ROSBE_ROSSCRIPTDIR/version.sh"
 
-# Change the current directory to the ReactOS source directory
+# Change the current directory to the BlastmasterOS source directory
 basedir

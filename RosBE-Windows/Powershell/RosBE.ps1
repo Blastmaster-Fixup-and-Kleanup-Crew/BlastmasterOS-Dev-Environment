@@ -233,5 +233,5 @@ if ($_ROSBE_SHOWVERSION -eq 1) {
 
 # Look if the BlastmasterOS source directory is empty.
 if ((get-childitem $_ROSBE_ROSSOURCEDIR).Count -le 0) {
-    "No BlastmasterOS source detected. Please check https://reactos.org/wiki/BlastmasterOS_Git_For_Dummies to download it."
+    "No BlastmasterOS source detected. Please check https://github.com/Blastmaster-Fixup-and-Kleanup-Crew/BlastmasterOS to download it."
 }

@@ -13,7 +13,7 @@ mkdir -p $I
 cp output-ppc/boot/freeldr/freeldr/ofwldr $I/yaboot
 cp $TOOLS/ofboot.b $I
 
-mkisofs -chrp-boot -U -part -hfs -T -r -l -J -A "ReactOS" -sysid PPC \
-	-V "ReactOS" -volset 1 -volset-size 1 -volset-seqno 1 \
-	-hfs-volid "ReactOS" -hfs-bless $I -map $TOOLS/hfsmap.lst \
+mkisofs -chrp-boot -U -part -hfs -T -r -l -J -A "BlastmasterOS" -sysid PPC \
+	-V "BlastmasterOS" -volset 1 -volset-size 1 -volset-seqno 1 \
+	-hfs-volid "BlastmasterOS" -hfs-bless $I -map $TOOLS/hfsmap.lst \
 	-no-desktop -allow-multidot -o ppcboot.iso $CD
