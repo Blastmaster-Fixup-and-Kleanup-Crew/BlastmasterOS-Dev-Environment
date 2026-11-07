@@ -1,10 +1,10 @@
-                           ReactOS Build Environment
+                           BlastmasterOS Dev Environment
                  Version 2.2.1 for Unix-based operating systems
                       Base package and i386 build tools
 
 Introduction
 -------------
-  The ReactOS Build Environment ("RosBE") is the official build environment
+  The BlastmasterOS Dev Environment ("RosBE") is the official build environment
 for compiling ReactOS. This version is targeted at Unix-based operating systems
 such as Linux, FreeBSD or macOS.
   The installation process is divided into two parts: First a script builds and
@@ -18,7 +18,7 @@ building ReactOS.
 Needed Applications and Libraries
 ----------------------------------
   Make sure that the following applications and libraries are installed on your
-system. They are needed to build the ReactOS Build Environment. The
+system. They are needed to build the BlastmasterOS Dev Environment. The
 "RosBE-Builder.sh" script automatically checks for their presence:
 
   * GNU Bash
@@ -163,7 +163,7 @@ Thanks go also to the members of the RosBE-Windows team, namely:
 Daniel Reimer (daniel.reimer@reactos.org)
 Peter Ward (dralnix@gmail.com)
 
-  Special thanks to ROSFan, who created the nice ReactOS Build Environment
+  Special thanks to ROSFan, who created the nice BlastmasterOS Dev Environment
 Logo.
   Special thanks also goes out to all those who provide so much help by
 testing out new versions, you know who you are. Without you, RosBE would not be

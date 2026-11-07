@@ -1,5 +1,5 @@
 /*
- * PROJECT:     ReactOS Build Environment Tools
+ * PROJECT:     BlastmasterOS Dev Environment Tools
  * LICENSE:     GNU General Public License v2. (see LICENSE.txt)
  * FILE:        Tools/cpucount.c
  * PURPOSE:     CPU Core Counter

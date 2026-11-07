@@ -1,5 +1,5 @@
 #
-# PROJECT:     RosBE - ReactOS Build Environment for Windows
+# PROJECT:     RosBE - BlastmasterOS Dev Environment for Windows
 # LICENSE:     GNU General Public License v2. (see LICENSE.txt)
 # FILE:        Root/kdbg.ps1
 # PURPOSE:     Displays a KDBG Session Interactively.
@@ -26,4 +26,4 @@ read-host 'Press any key to continue . . .'
 
 log2lines -c $LOGFILE -P "piperead -c \\.\pipe\kdbg"
 
-$host.ui.RawUI.WindowTitle = "ReactOS Build Environment $_ROSBE_VERSION"
+$host.ui.RawUI.WindowTitle = "BlastmasterOS Dev Environment $_ROSBE_VERSION"

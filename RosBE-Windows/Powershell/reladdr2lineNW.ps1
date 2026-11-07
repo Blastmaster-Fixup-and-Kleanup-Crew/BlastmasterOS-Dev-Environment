@@ -1,5 +1,5 @@
 #
-# PROJECT:     RosBE - ReactOS Build Environment for Windows
+# PROJECT:     RosBE - BlastmasterOS Dev Environment for Windows
 # LICENSE:     GNU General Public License v2. (see LICENSE.txt)
 # FILE:        Root/reladdr2line.ps1
 # PURPOSE:     Converts a value to hex and displays it.
@@ -37,4 +37,4 @@ $base = (objdump -p $FILEPATH | select-string "ImageBase").tostring().split()[$b
 $address = ("$base" | % {[Convert]::ToInt64($_,16)}) + ("$ADDRESS" | % {[Convert]::ToInt64($_,16)})
 $calcbase = ("{0:X}" -f $address)
 IEX "& addr2line.exe -p -f -a -e '$FILEPATH' '$CALCBASE'"
-$host.ui.RawUI.WindowTitle = "ReactOS Build Environment $_ROSBE_VERSION"
+$host.ui.RawUI.WindowTitle = "BlastmasterOS Dev Environment $_ROSBE_VERSION"

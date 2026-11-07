@@ -1,5 +1,5 @@
 #
-# PROJECT:     RosBE - ReactOS Build Environment for Windows
+# PROJECT:     RosBE - BlastmasterOS Dev Environment for Windows
 # LICENSE:     GNU General Public License v2. (see LICENSE.txt)
 # FILE:        Root/chdefgcc.ps1
 # PURPOSE:     Tool to change the current gcc in RosBE.
@@ -9,7 +9,7 @@
 $host.ui.RawUI.WindowTitle = "Change the current MinGW/GCC Host/Target directory..."
 
 function settitle {
-    $host.ui.RawUI.WindowTitle = "ReactOS Build Environment $_ROSBE_VERSION"
+    $host.ui.RawUI.WindowTitle = "BlastmasterOS Dev Environment $_ROSBE_VERSION"
     exit
 }
 

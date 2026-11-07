@@ -35,7 +35,7 @@ Copyright (c) 2026, Ziliang Guo
   <xsl:template match="/wix:Wix">
     <Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
       <Product xmlns="http://schemas.microsoft.com/wix/2006/wi"
-       Id="877D13F9-FC8A-42DC-9D57-A7F55A4FEA3A" Name="ReactOS Build Environment"
+       Id="877D13F9-FC8A-42DC-9D57-A7F55A4FEA3A" Name="BlastmasterOS Dev Environment"
        Language="1033" Version="2.0"
        Manufacturer="ReactOS Project" UpgradeCode="AC1907F1-2D33-4809-A275-91FDEE93F401">
         <Package InstallerVersion="300" Compressed="yes"/>
@@ -44,7 +44,7 @@ Copyright (c) 2026, Ziliang Guo
         <Property Id="ROOTDRIVE"><![CDATA[C:\]]></Property>
         <Directory Id="TARGETDIR" Name="SourceDir">
           <Directory Id="ProgramFilesFolder">
-            <Directory Id="RosBE" Name="ReactOS Build Environment">
+            <Directory Id="RosBE" Name="BlastmasterOS Dev Environment">
             </Directory>
 
           </Directory>
@@ -54,7 +54,7 @@ Copyright (c) 2026, Ziliang Guo
 		
 		<DirectoryRef Id="RosBE">
 			<Component Id="RosBEShortcut" Guid="9D59FF49-93A1-4394-918B-A84456B47BAB">
-				<Shortcut Id="StartMenuShortcut" Name="ReactOS BE" Description="ReactOS Build Environment" Target="[RosBE]RosBE.cmd" WorkingDirectory="SourceCheckout" />
+				<Shortcut Id="StartMenuShortcut" Name="ReactOS BE" Description="BlastmasterOS Dev Environment" Target="[RosBE]RosBE.cmd" WorkingDirectory="SourceCheckout" />
 				<RemoveFolder Id="RosBE" On="uninstall"/>
 				<RegistryValue Root="HKCU" Key="Software\Microsoft\RosBE" Name="installed" Type="integer" Value="1" KeyPath="yes"/>
 			</Component>
@@ -64,7 +64,7 @@ Copyright (c) 2026, Ziliang Guo
           <![CDATA[(VersionNT >= 501)]]>
         </Condition>
         <!-- Feature Block e.g. ComponentRef's -->
-        <Feature Id="ReactOS_Build_Environment" Title="ReactOS Build Environment" Level="1" Display="expand">
+        <Feature Id="ReactOS_Build_Environment" Title="BlastmasterOS Dev Environment" Level="1" Display="expand">
 		<Feature Id="x86" Title="x86 Build Tools" Level="1">
 		<xsl:apply-templates select="wix:Fragment" mode="CompRef" />
 		<ComponentRef Id="RosBEShortcut" />

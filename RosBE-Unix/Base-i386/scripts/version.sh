@@ -9,7 +9,7 @@
 source "$_ROSBE_ROSSCRIPTDIR/setuplibrary.sh"
 
 # Display RosBE version
-echo "This is the ReactOS Build Environment for Unix-based Operating Systems"
+echo "This is the BlastmasterOS Dev Environment for Unix-based Operating Systems"
 echo "Version $_ROSBE_VERSION"
 echo
 

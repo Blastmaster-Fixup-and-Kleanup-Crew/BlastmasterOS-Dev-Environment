@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 #
-# ReactOS Build Environment for Unix-based Operating Systems - Packaging tool for DEB source packages
+# BlastmasterOS Dev Environment for Unix-based Operating Systems - Packaging tool for DEB source packages
 # Copyright 2020 Colin Finck <colin@reactos.org>
 #
 # Released under GNU GPL v2 or any later version.

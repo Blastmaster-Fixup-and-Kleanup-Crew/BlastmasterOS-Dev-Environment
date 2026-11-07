@@ -1,5 +1,5 @@
 Unicode true
-!define PRODUCT_NAME "ReactOS Build Environment"
+!define PRODUCT_NAME "BlastmasterOS Dev Environment"
 !define PRODUCT_VERSION "2.3.0"
 !define PRODUCT_DIR_REGKEY "Software\Microsoft\Windows\CurrentVersion\App Paths\RosBE.cmd"
 !define PRODUCT_UNINST_KEY "Software\Microsoft\Windows\CurrentVersion\Uninstall\${PRODUCT_NAME}"
@@ -89,7 +89,7 @@ var REACTOS_SOURCE_DIRECTORY
 ;;
 var ICONS_GROUP
 !define MUI_STARTMENUPAGE_NODISABLE
-!define MUI_STARTMENUPAGE_DEFAULTFOLDER "ReactOS Build Environment"
+!define MUI_STARTMENUPAGE_DEFAULTFOLDER "BlastmasterOS Dev Environment"
 !define MUI_STARTMENUPAGE_REGISTRY_ROOT "${PRODUCT_UNINST_ROOT_KEY}"
 !define MUI_STARTMENUPAGE_REGISTRY_KEY "${PRODUCT_UNINST_KEY}"
 !define MUI_STARTMENUPAGE_REGISTRY_VALUENAME "${PRODUCT_STARTMENU_REGVAL}"
@@ -257,14 +257,14 @@ Section -StartMenuShortcuts SEC06
         CreateDirectory "$SMPROGRAMS\$ICONS_GROUP"
         SetOutPath $REACTOS_SOURCE_DIRECTORY
         IfFileExists "$INSTDIR\RosBE.cmd" 0 +2
-            CreateShortCut "$SMPROGRAMS\$ICONS_GROUP\ReactOS Build Environment ${PRODUCT_VERSION}.lnk" "$SYSDIR\cmd.exe" '/t:0A /k "$INSTDIR\RosBE.cmd"' "$INSTDIR\rosbe.ico"
+            CreateShortCut "$SMPROGRAMS\$ICONS_GROUP\BlastmasterOS Dev Environment ${PRODUCT_VERSION}.lnk" "$SYSDIR\cmd.exe" '/t:0A /k "$INSTDIR\RosBE.cmd"' "$INSTDIR\rosbe.ico"
         IfFileExists "$INSTDIR\RosBE.ps1" 0 +2
-            CreateShortCut "$SMPROGRAMS\$ICONS_GROUP\ReactOS Build Environment ${PRODUCT_VERSION} - PS.lnk" "$SYSDIR\WindowsPowerShell\v1.0\powershell.exe" "-noexit &'$INSTDIR\RosBE.ps1'" "$INSTDIR\rosbe.ico"
+            CreateShortCut "$SMPROGRAMS\$ICONS_GROUP\BlastmasterOS Dev Environment ${PRODUCT_VERSION} - PS.lnk" "$SYSDIR\WindowsPowerShell\v1.0\powershell.exe" "-noexit &'$INSTDIR\RosBE.ps1'" "$INSTDIR\rosbe.ico"
         IfFileExists "$INSTDIR\amd64\*" 0 +5
             IfFileExists "$INSTDIR\RosBE.cmd" 0 +2
-                CreateShortCut "$SMPROGRAMS\$ICONS_GROUP\ReactOS Build Environment ${PRODUCT_VERSION} AMD64.lnk" "$SYSDIR\cmd.exe" '/t:0B /k "$INSTDIR\RosBE.cmd" amd64' "$INSTDIR\rosbe.ico"
+                CreateShortCut "$SMPROGRAMS\$ICONS_GROUP\BlastmasterOS Dev Environment ${PRODUCT_VERSION} AMD64.lnk" "$SYSDIR\cmd.exe" '/t:0B /k "$INSTDIR\RosBE.cmd" amd64' "$INSTDIR\rosbe.ico"
             IfFileExists "$INSTDIR\RosBE.ps1" 0 +2
-                CreateShortCut "$SMPROGRAMS\$ICONS_GROUP\ReactOS Build Environment ${PRODUCT_VERSION} AMD64 - PS.lnk" "$SYSDIR\WindowsPowerShell\v1.0\powershell.exe" "-noexit &'$INSTDIR\RosBE.ps1' amd64" "$INSTDIR\rosbe.ico"
+                CreateShortCut "$SMPROGRAMS\$ICONS_GROUP\BlastmasterOS Dev Environment ${PRODUCT_VERSION} AMD64 - PS.lnk" "$SYSDIR\WindowsPowerShell\v1.0\powershell.exe" "-noexit &'$INSTDIR\RosBE.ps1' amd64" "$INSTDIR\rosbe.ico"
         SetOutPath $INSTDIR
         CreateShortCut "$SMPROGRAMS\$ICONS_GROUP\Uninstall RosBE.lnk" \
                        "$INSTDIR\Uninstall.exe"
@@ -282,14 +282,14 @@ Section /o "Desktop Shortcuts" SEC07
     ;;
     SetOutPath $REACTOS_SOURCE_DIRECTORY
     IfFileExists "$INSTDIR\RosBE.cmd" 0 +2
-        CreateShortCut "$DESKTOP\ReactOS Build Environment ${PRODUCT_VERSION}.lnk" "$SYSDIR\cmd.exe" '/t:0A /k "$INSTDIR\RosBE.cmd"' "$INSTDIR\rosbe.ico"
+        CreateShortCut "$DESKTOP\BlastmasterOS Dev Environment ${PRODUCT_VERSION}.lnk" "$SYSDIR\cmd.exe" '/t:0A /k "$INSTDIR\RosBE.cmd"' "$INSTDIR\rosbe.ico"
     IfFileExists "$INSTDIR\RosBE.ps1" 0 +2
-        CreateShortCut "$DESKTOP\ReactOS Build Environment ${PRODUCT_VERSION} - PS.lnk" "$SYSDIR\WindowsPowerShell\v1.0\powershell.exe" "-noexit &'$INSTDIR\RosBE.ps1'" "$INSTDIR\rosbe.ico"
+        CreateShortCut "$DESKTOP\BlastmasterOS Dev Environment ${PRODUCT_VERSION} - PS.lnk" "$SYSDIR\WindowsPowerShell\v1.0\powershell.exe" "-noexit &'$INSTDIR\RosBE.ps1'" "$INSTDIR\rosbe.ico"
     IfFileExists "$INSTDIR\amd64\*" 0 +5
         IfFileExists "$INSTDIR\RosBE.cmd" 0 +2
-            CreateShortCut "$DESKTOP\ReactOS Build Environment ${PRODUCT_VERSION} AMD64.lnk" "$SYSDIR\cmd.exe" '/t:0B /k "$INSTDIR\RosBE.cmd" amd64' "$INSTDIR\rosbe.ico"
+            CreateShortCut "$DESKTOP\BlastmasterOS Dev Environment ${PRODUCT_VERSION} AMD64.lnk" "$SYSDIR\cmd.exe" '/t:0B /k "$INSTDIR\RosBE.cmd" amd64' "$INSTDIR\rosbe.ico"
         IfFileExists "$INSTDIR\RosBE.ps1" 0 +2
-            CreateShortCut "$DESKTOP\ReactOS Build Environment ${PRODUCT_VERSION} AMD64 - PS.lnk" "$SYSDIR\WindowsPowerShell\v1.0\powershell.exe" "-noexit &'$INSTDIR\RosBE.ps1' amd64" "$INSTDIR\rosbe.ico"
+            CreateShortCut "$DESKTOP\BlastmasterOS Dev Environment ${PRODUCT_VERSION} AMD64 - PS.lnk" "$SYSDIR\WindowsPowerShell\v1.0\powershell.exe" "-noexit &'$INSTDIR\RosBE.ps1' amd64" "$INSTDIR\rosbe.ico"
 SectionEnd
 
 Section /o "Quick Launch Shortcuts" SEC08
@@ -299,14 +299,14 @@ Section /o "Quick Launch Shortcuts" SEC08
     ;;
     SetOutPath $REACTOS_SOURCE_DIRECTORY
     IfFileExists "$INSTDIR\RosBE.cmd" 0 +2
-        CreateShortCut "$QUICKLAUNCH\ReactOS Build Environment ${PRODUCT_VERSION}.lnk" "$SYSDIR\cmd.exe" '/t:0A /k "$INSTDIR\RosBE.cmd"' "$INSTDIR\rosbe.ico"
+        CreateShortCut "$QUICKLAUNCH\BlastmasterOS Dev Environment ${PRODUCT_VERSION}.lnk" "$SYSDIR\cmd.exe" '/t:0A /k "$INSTDIR\RosBE.cmd"' "$INSTDIR\rosbe.ico"
     IfFileExists "$INSTDIR\RosBE.ps1" 0 +2
-        CreateShortCut "$QUICKLAUNCH\ReactOS Build Environment ${PRODUCT_VERSION} - PS.lnk" "$SYSDIR\WindowsPowerShell\v1.0\powershell.exe" "-noexit &'$INSTDIR\RosBE.ps1'" "$INSTDIR\rosbe.ico"
+        CreateShortCut "$QUICKLAUNCH\BlastmasterOS Dev Environment ${PRODUCT_VERSION} - PS.lnk" "$SYSDIR\WindowsPowerShell\v1.0\powershell.exe" "-noexit &'$INSTDIR\RosBE.ps1'" "$INSTDIR\rosbe.ico"
     IfFileExists "$INSTDIR\amd64\*" 0 +5
         IfFileExists "$INSTDIR\RosBE.cmd" 0 +2
-            CreateShortCut "$QUICKLAUNCH\ReactOS Build Environment ${PRODUCT_VERSION} AMD64.lnk" "$SYSDIR\cmd.exe" '/t:0B /k "$INSTDIR\RosBE.cmd" amd64' "$INSTDIR\rosbe.ico"
+            CreateShortCut "$QUICKLAUNCH\BlastmasterOS Dev Environment ${PRODUCT_VERSION} AMD64.lnk" "$SYSDIR\cmd.exe" '/t:0B /k "$INSTDIR\RosBE.cmd" amd64' "$INSTDIR\rosbe.ico"
         IfFileExists "$INSTDIR\RosBE.ps1" 0 +2
-            CreateShortCut "$QUICKLAUNCH\ReactOS Build Environment ${PRODUCT_VERSION} AMD64 - PS.lnk" "$SYSDIR\WindowsPowerShell\v1.0\powershell.exe" "-noexit &'$INSTDIR\RosBE.ps1' amd64" "$INSTDIR\rosbe.ico"
+            CreateShortCut "$QUICKLAUNCH\BlastmasterOS Dev Environment ${PRODUCT_VERSION} AMD64 - PS.lnk" "$SYSDIR\WindowsPowerShell\v1.0\powershell.exe" "-noexit &'$INSTDIR\RosBE.ps1' amd64" "$INSTDIR\rosbe.ico"
 SectionEnd
 
 Section -Post SEC09
@@ -320,30 +320,30 @@ SectionEnd
 Function un.onUninstSuccess
     HideWindow
     MessageBox MB_ICONINFORMATION|MB_OK \
-               "ReactOS Build Environment was successfully removed from your computer."
+               "BlastmasterOS Dev Environment was successfully removed from your computer."
 FunctionEnd
 
 Function un.onInit
     MessageBox MB_ICONQUESTION|MB_YESNO|MB_DEFBUTTON2 \
-        "Are you sure you want to remove ReactOS Build Environment and all of its components?" \
+        "Are you sure you want to remove BlastmasterOS Dev Environment and all of its components?" \
         IDYES +2
     Abort
     IfFileExists "$APPDATA\RosBE\." 0 +3
         MessageBox MB_ICONQUESTION|MB_YESNO|MB_DEFBUTTON2 \
-        "Do you want to remove the ReactOS Build Environment configuration file from the Application Data Path?" \
+        "Do you want to remove the BlastmasterOS Dev Environment configuration file from the Application Data Path?" \
         IDNO +2
         RMDir /r /REBOOTOK "$APPDATA\RosBE"
     MessageBox MB_ICONQUESTION|MB_YESNO|MB_DEFBUTTON2 \
     "Do you want to remove the Shortcuts? If you just want to Update to a new Version of RosBE, keep them. This keeps your previous settings." \
     IDNO +9
-        Delete /REBOOTOK "$DESKTOP\ReactOS Build Environment ${PRODUCT_VERSION}.lnk"
-        Delete /REBOOTOK "$QUICKLAUNCH\ReactOS Build Environment ${PRODUCT_VERSION}.lnk"
-        Delete /REBOOTOK "$DESKTOP\ReactOS Build Environment ${PRODUCT_VERSION} - PS.lnk"
-        Delete /REBOOTOK "$QUICKLAUNCH\ReactOS Build Environment ${PRODUCT_VERSION} - PS.lnk"
-        Delete /REBOOTOK "$DESKTOP\ReactOS Build Environment ${PRODUCT_VERSION} AMD64.lnk"
-        Delete /REBOOTOK "$QUICKLAUNCH\ReactOS Build Environment ${PRODUCT_VERSION} AMD64.lnk"
-        Delete /REBOOTOK "$DESKTOP\ReactOS Build Environment ${PRODUCT_VERSION} AMD64 - PS.lnk"
-        Delete /REBOOTOK "$QUICKLAUNCH\ReactOS Build Environment ${PRODUCT_VERSION} AMD64 - PS.lnk"
+        Delete /REBOOTOK "$DESKTOP\BlastmasterOS Dev Environment ${PRODUCT_VERSION}.lnk"
+        Delete /REBOOTOK "$QUICKLAUNCH\BlastmasterOS Dev Environment ${PRODUCT_VERSION}.lnk"
+        Delete /REBOOTOK "$DESKTOP\BlastmasterOS Dev Environment ${PRODUCT_VERSION} - PS.lnk"
+        Delete /REBOOTOK "$QUICKLAUNCH\BlastmasterOS Dev Environment ${PRODUCT_VERSION} - PS.lnk"
+        Delete /REBOOTOK "$DESKTOP\BlastmasterOS Dev Environment ${PRODUCT_VERSION} AMD64.lnk"
+        Delete /REBOOTOK "$QUICKLAUNCH\BlastmasterOS Dev Environment ${PRODUCT_VERSION} AMD64.lnk"
+        Delete /REBOOTOK "$DESKTOP\BlastmasterOS Dev Environment ${PRODUCT_VERSION} AMD64 - PS.lnk"
+        Delete /REBOOTOK "$QUICKLAUNCH\BlastmasterOS Dev Environment ${PRODUCT_VERSION} AMD64 - PS.lnk"
 FunctionEnd
 
 Section Uninstall

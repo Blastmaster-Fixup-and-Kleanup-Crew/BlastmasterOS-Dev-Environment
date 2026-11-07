@@ -1,5 +1,5 @@
 /*
- * PROJECT:     RosBE - ReactOS Build Environment for Windows.
+ * PROJECT:     RosBE - BlastmasterOS Dev Environment for Windows.
  * LICENSE:     GNU General Public License v2. (see LICENSE.txt)
  * FILE:        Tools/chkslash.c
  * PURPOSE:     Checks if a string has a backslash '\' in it or not.

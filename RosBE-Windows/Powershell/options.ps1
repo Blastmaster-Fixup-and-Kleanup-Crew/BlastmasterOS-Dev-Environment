@@ -1,5 +1,5 @@
 #
-# PROJECT:     RosBE - ReactOS Build Environment for Windows
+# PROJECT:     RosBE - BlastmasterOS Dev Environment for Windows
 # LICENSE:     GNU General Public License v2. (see LICENSE.txt)
 # FILE:        Root/options.ps1
 # PURPOSE:     Starts options.exe and restarts RosBE afterwards.
@@ -29,4 +29,4 @@ if (Test-Path "$_ROSBE_BASEDIR\bin\options.exe") {
     throw {"ERROR: options executable was not found."}
 }
 
-$host.ui.RawUI.WindowTitle = "ReactOS Build Environment $_ROSBE_VERSION"
+$host.ui.RawUI.WindowTitle = "BlastmasterOS Dev Environment $_ROSBE_VERSION"

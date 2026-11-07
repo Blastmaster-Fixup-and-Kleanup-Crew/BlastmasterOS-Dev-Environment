@@ -1,5 +1,5 @@
 #
-# PROJECT:     RosBE - ReactOS Build Environment for Windows
+# PROJECT:     RosBE - BlastmasterOS Dev Environment for Windows
 # LICENSE:     GNU General Public License v2. (see LICENSE.txt)
 # FILE:        Root/charch.ps1
 # PURPOSE:     Tool to change the current Arch to build ROS for in RosBE.
@@ -34,4 +34,4 @@ if ("$ENV:ROS_ARCH" -eq "i386") {
 
 chdefgcc $ENV:ROS_ARCH target
 
-$host.ui.RawUI.WindowTitle = "ReactOS Build Environment $_ROSBE_VERSION"
+$host.ui.RawUI.WindowTitle = "BlastmasterOS Dev Environment $_ROSBE_VERSION"

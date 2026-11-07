@@ -43,7 +43,7 @@ change_architecture "${3:-i386}"
 
 # Display banner
 echo "*******************************************************************************"
-echo "*         ReactOS Build Environment for Unix-based Operating Systems          *"
+echo "*         BlastmasterOS Dev Environment for Unix-based Operating Systems          *"
 echo "*                      by Colin Finck <colin@reactos.org>                     *"
 echo "*                                                                             *"
 echo "*                                 Version $_ROSBE_VERSION                               *"

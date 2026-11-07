@@ -1,5 +1,5 @@
 ::
-:: PROJECT:     RosBE - ReactOS Build Environment for Windows
+:: PROJECT:     RosBE - BlastmasterOS Dev Environment for Windows
 :: LICENSE:     GNU General Public License v2. (see LICENSE.txt)
 :: FILE:        Root/raddr2line.cmd
 :: PURPOSE:     Converts a value to hex and displays it.
@@ -66,5 +66,5 @@ for /f %%i in ('"echoh.exe !ADDRESS!"') do set RELBASE=%%i
 addr2line.exe -p -f -a -e !FILEPATH! !RELBASE!
 
 :EOC
-title ReactOS Build Environment %_ROSBE_VERSION%
+title BlastmasterOS Dev Environment %_ROSBE_VERSION%
 endlocal

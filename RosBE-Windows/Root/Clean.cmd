@@ -1,5 +1,5 @@
 ::
-:: PROJECT:     RosBE - ReactOS Build Environment for Windows
+:: PROJECT:     RosBE - BlastmasterOS Dev Environment for Windows
 :: LICENSE:     GNU General Public License v2. (see LICENSE.txt)
 :: FILE:        Root/Clean.cmd
 :: PURPOSE:     Clean the ReactOS source directory.
@@ -64,5 +64,5 @@ if exist "CMakeLists.txt" (
 goto :EOF
 
 :EOC
-title ReactOS Build Environment %_ROSBE_VERSION%
+title BlastmasterOS Dev Environment %_ROSBE_VERSION%
 endlocal

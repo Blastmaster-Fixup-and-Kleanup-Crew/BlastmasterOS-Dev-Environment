@@ -1,5 +1,5 @@
 #
-# PROJECT:     RosBE - ReactOS Build Environment for Windows.
+# PROJECT:     RosBE - BlastmasterOS Dev Environment for Windows.
 # LICENSE:     GNU General Public License v2. (see LICENSE.txt)
 # FILE:        Root/scut.ps1
 # PURPOSE:     Manages named shortcuts to ReactOS source directories.
@@ -33,4 +33,4 @@ elseif ("$($args[0])" -eq "-h")     {paramcall($args)}
 elseif ("$($args[0])" -eq "--help") {paramcall($args)}
 else {parse($args)}
 
-$host.ui.RawUI.WindowTitle = "ReactOS Build Environment $_ROSBE_VERSION"
+$host.ui.RawUI.WindowTitle = "BlastmasterOS Dev Environment $_ROSBE_VERSION"

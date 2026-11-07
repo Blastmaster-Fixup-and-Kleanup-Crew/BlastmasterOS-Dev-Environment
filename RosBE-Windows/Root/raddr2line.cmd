@@ -1,5 +1,5 @@
 ::
-:: PROJECT:     RosBE - ReactOS Build Environment for Windows
+:: PROJECT:     RosBE - BlastmasterOS Dev Environment for Windows
 :: LICENSE:     GNU General Public License v2. (see LICENSE.txt)
 :: FILE:        Root/raddr2line.cmd
 :: PURPOSE:     Converts a value to hex and displays it.
@@ -63,5 +63,5 @@ if not "%OUTPUT%" == "" (
 )
 
 :EOC
-title ReactOS Build Environment %_ROSBE_VERSION%
+title BlastmasterOS Dev Environment %_ROSBE_VERSION%
 endlocal

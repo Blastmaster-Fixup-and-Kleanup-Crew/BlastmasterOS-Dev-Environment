@@ -12,6 +12,6 @@ Package: rosbe-unix
 Architecture: amd64
 Depends: build-essential, ${shlibs:Depends}, ${misc:Depends}
 Recommends: git
-Description: ReactOS Build Environment for Unix-based Operating Systems
+Description: BlastmasterOS Dev Environment for Unix-based Operating Systems
  The official build environment for the ReactOS operating system
  (https://reactos.org)

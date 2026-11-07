@@ -9,7 +9,7 @@ This repository is the toolchain and build-helper repository. It is not a replac
 
 ## Repository layout
 
-- `RosBE-Windows/` — Windows ReactOS Build Environment components.
+- `RosBE-Windows/` — Windows BlastmasterOS Dev Environment components.
 - `RosBE-Unix/` — Unix build-environment components.
 - `RosBE-PPC/` — PowerPC build-environment components.
 - `Tools/` — build-environment utilities.

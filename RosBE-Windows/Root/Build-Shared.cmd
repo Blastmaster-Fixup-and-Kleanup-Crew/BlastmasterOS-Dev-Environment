@@ -1,5 +1,5 @@
 ::
-:: PROJECT:     RosBE - ReactOS Build Environment for Windows
+:: PROJECT:     RosBE - BlastmasterOS Dev Environment for Windows
 :: LICENSE:     GNU General Public License v2. (see LICENSE.txt)
 :: FILE:        Root/Build-Shared.cmd
 :: PURPOSE:     Perform the build of ReactOS - Shared commands.
@@ -73,5 +73,5 @@ if not %_ROSBE_NOSOUND% == 1 (
 flash.exe
 
 :EOF
-title ReactOS Build Environment %_ROSBE_VERSION%
+title BlastmasterOS Dev Environment %_ROSBE_VERSION%
 echo.

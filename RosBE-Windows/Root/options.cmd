@@ -1,5 +1,5 @@
 ::
-:: PROJECT:     RosBE - ReactOS Build Environment for Windows
+:: PROJECT:     RosBE - BlastmasterOS Dev Environment for Windows
 :: LICENSE:     GNU General Public License v2. (see LICENSE.txt)
 :: FILE:        Root/options.cmd
 :: PURPOSE:     Starts options.exe and restarts RosBE afterwards.
@@ -35,4 +35,4 @@ if exist "%_ROSBE_BASEDIR%\bin\options.exe" (
     echo ERROR: options executable was not found.
 )
 
-title ReactOS Build Environment %_ROSBE_VERSION%
+title BlastmasterOS Dev Environment %_ROSBE_VERSION%

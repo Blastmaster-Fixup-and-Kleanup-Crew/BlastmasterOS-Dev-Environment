@@ -1,6 +1,6 @@
 #!/bin/bash
 #
-# ReactOS Build Environment for Windows - Script for building a RosBE toolchain for Windows
+# BlastmasterOS Dev Environment for Windows - Script for building a RosBE toolchain for Windows
 # Partly based on RosBE-Unix' "RosBE-Builder.sh"
 # Copyright 2009-2026 Colin Finck <colin@reactos.org>
 #
@@ -77,7 +77,7 @@ source "$rs_scriptdir/scripts/setuplibrary.sh"
 
 
 echo "*******************************************************************************"
-echo "*     Buildtoolchain script for the ReactOS Build Environment for Windows     *"
+echo "*     Buildtoolchain script for the BlastmasterOS Dev Environment for Windows     *"
 echo "*                             Package \"rosbe_2.2.1\"                           *"
 echo "*                                  MinGW part                                 *"
 echo "*                      by Colin Finck <colin@reactos.org>                     *"

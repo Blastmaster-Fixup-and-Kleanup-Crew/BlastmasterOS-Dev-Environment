@@ -1,5 +1,5 @@
 ::
-:: PROJECT:     RosBE - ReactOS Build Environment for Windows.
+:: PROJECT:     RosBE - BlastmasterOS Dev Environment for Windows.
 :: LICENSE:     GNU General Public License v2. (see LICENSE.txt)
 :: FILE:        Root/scut.cmd
 :: PURPOSE:     Manages named shortcuts to ReactOS source directories.
@@ -39,4 +39,4 @@ goto :EOC
 call scut.exe "%1" %2 %3
 
 :EOC
-title ReactOS Build Environment %_ROSBE_VERSION%
+title BlastmasterOS Dev Environment %_ROSBE_VERSION%

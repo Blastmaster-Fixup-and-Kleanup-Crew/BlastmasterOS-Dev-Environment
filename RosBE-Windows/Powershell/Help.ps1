@@ -1,8 +1,8 @@
 #
-# PROJECT:     RosBE - ReactOS Build Environment for Windows
+# PROJECT:     RosBE - BlastmasterOS Dev Environment for Windows
 # LICENSE:     GNU General Public License v2. (see LICENSE.txt)
 # FILE:        Root/Help.ps1
-# PURPOSE:     Display help for the commands included with the ReactOS Build Environment.
+# PURPOSE:     Display help for the commands included with the BlastmasterOS Dev Environment.
 # COPYRIGHT:   Copyright 2026 Daniel Reimer <reimer.daniel@freenet.de>
 #
 

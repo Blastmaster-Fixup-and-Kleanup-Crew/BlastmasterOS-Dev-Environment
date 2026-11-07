@@ -1,5 +1,5 @@
 ::
-:: PROJECT:     RosBE - ReactOS Build Environment for Windows
+:: PROJECT:     RosBE - BlastmasterOS Dev Environment for Windows
 :: LICENSE:     GNU General Public License v2. (see LICENSE.txt)
 :: FILE:        Root/RosBE.cmd
 :: PURPOSE:     This script provides/sets up various build environments for
@@ -15,7 +15,7 @@ if %_ROSBE_DEBUG% == 1 (
     @echo on
 )
 
-title ReactOS Build Environment %_ROSBE_VERSION%
+title BlastmasterOS Dev Environment %_ROSBE_VERSION%
 
 set platform=false
 set _ROSBE_MSVCARCH=%2
@@ -150,7 +150,7 @@ prompt
 cls
 echo *******************************************************************************
 echo *                                                                             *
-echo *                        ReactOS Build Environment %_ROSBE_VERSION%                      *
+echo *                        BlastmasterOS Dev Environment %_ROSBE_VERSION%                      *
 echo *                                                                             *
 echo *******************************************************************************
 echo.

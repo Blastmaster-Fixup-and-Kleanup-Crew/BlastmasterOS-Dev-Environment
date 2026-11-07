@@ -1,5 +1,5 @@
 ::
-:: PROJECT:     RosBE - ReactOS Build Environment for Windows
+:: PROJECT:     RosBE - BlastmasterOS Dev Environment for Windows
 :: LICENSE:     GNU General Public License v2. (see LICENSE.txt)
 :: FILE:        Root/chdefdir.cmd
 :: PURPOSE:     Tool to change the current working ReactOS source directory
@@ -42,6 +42,6 @@ if /i "%SOURCEDIR%" == "previous" (
 )
 
 :EOC
-title ReactOS Build Environment %_ROSBE_VERSION%
+title BlastmasterOS Dev Environment %_ROSBE_VERSION%
 endlocal & set _ROSBE_ROSSOURCEDIR=%CD%
 cd /d %_ROSBE_ROSSOURCEDIR%

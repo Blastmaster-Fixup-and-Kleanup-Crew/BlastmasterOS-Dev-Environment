@@ -68,13 +68,13 @@ done
 rs_boldmsg "Create Shortcut"
 
 echo -n "Creating shortcut... "
-shortcut="$shortcutdir/ReactOS Build Environment.desktop"
+shortcut="$shortcutdir/BlastmasterOS Dev Environment.desktop"
 
 echo "[Desktop Entry]" > "$shortcut"
 echo "Type=Application" >> "$shortcut"
 echo "Categories=Development" >> "$shortcut"
 echo "Version=$ROSBE_VERSION" >> "$shortcut"
-echo "Name=ReactOS Build Environment" >> "$shortcut"
+echo "Name=BlastmasterOS Dev Environment" >> "$shortcut"
 echo "Icon=$SCRIPTDIR/RosBE.png" >> "$shortcut"
 echo "Exec=bash \"$SCRIPTDIR/RosBE.sh\" \"$sourcedir\"" >> "$shortcut"
 echo "Terminal=true" >> "$shortcut"

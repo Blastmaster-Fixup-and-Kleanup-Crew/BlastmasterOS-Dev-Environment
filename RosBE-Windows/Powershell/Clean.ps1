@@ -1,5 +1,5 @@
 #
-# PROJECT:     RosBE - ReactOS Build Environment for Windows
+# PROJECT:     RosBE - BlastmasterOS Dev Environment for Windows
 # LICENSE:     GNU General Public License v2. (see LICENSE.txt)
 # FILE:        Root/Clean.ps1
 # PURPOSE:     Clean the ReactOS source directory.
@@ -32,7 +32,7 @@ function rembin {
 }
 
 function end {
-    $host.ui.RawUI.WindowTitle = "ReactOS Build Environment $_ROSBE_VERSION"
+    $host.ui.RawUI.WindowTitle = "BlastmasterOS Dev Environment $_ROSBE_VERSION"
     exit
 }
 

@@ -1,5 +1,5 @@
 ::
-:: PROJECT:     RosBE - ReactOS Build Environment for Windows
+:: PROJECT:     RosBE - BlastmasterOS Dev Environment for Windows
 :: LICENSE:     GNU General Public License v2. (see LICENSE.txt)
 :: FILE:        Root/chdefgcc.cmd
 :: PURPOSE:     Tool to change the current gcc in RosBE.
@@ -70,4 +70,4 @@ call "%_ROSBE_BASEDIR%\rosbe-gcc-env.cmd"
 call "%_ROSBE_BASEDIR%\version.cmd"
 
 :EOC
-title ReactOS Build Environment %_ROSBE_VERSION%
+title BlastmasterOS Dev Environment %_ROSBE_VERSION%
