@@ -10,7 +10,7 @@ $host.ui.RawUI.WindowTitle = "Change the Architecture to build for..."
 
 if ($args.count -eq 0) {
     # Parse the command line arguments.
-    $ARCH = Read-Host "Please enter a Architecture you want to build ReactOS for: "
+    $ARCH = Read-Host "Please enter a Architecture you want to build BlastmasterOS for: "
     if ($ARCH.length -eq 0) {
         throw {"ERROR: You must enter a Architecture."}
     }

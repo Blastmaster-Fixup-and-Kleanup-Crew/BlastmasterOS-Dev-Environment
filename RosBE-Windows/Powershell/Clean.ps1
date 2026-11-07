@@ -48,12 +48,6 @@ elseif ("$args" -eq "all") {
     rembin
 }
 elseif ("$args" -ne "") {
-    $argindex = 0
-    while ( "$($args[$argindex])" -ne "") {
-        $cl = "$($args[$argindex])" + "_clean"
-        make $cl
-        $argindex += 1
-    }
-    remove-variable cl
+    throw "Unsupported clean option. Use clean, clean all, or clean logs."
 }
 end

@@ -29,7 +29,7 @@ END
 
 ID_DIALOG64 DIALOGEX DISCARDABLE  0, 0, 260, 220
 STYLE DS_SHELLFONT | DS_MODALFRAME | DS_CENTER | WS_VISIBLE | WS_POPUP | WS_CAPTION | WS_SYSMENU
-CAPTION "Configuración de ReactOS AMD64 Build Environment"
+CAPTION "Configuración de BlastmasterOS AMD64 Build Environment"
 FONT 8, "MS Shell Dlg"
 BEGIN
   LTEXT "Color de fondo", -1, 10, 10, 75, 12
@@ -56,7 +56,7 @@ END
 
 ID_DIALOGARM DIALOGEX DISCARDABLE  0, 0, 260, 220
 STYLE DS_SHELLFONT | DS_MODALFRAME | DS_CENTER | WS_VISIBLE | WS_POPUP | WS_CAPTION | WS_SYSMENU
-CAPTION "Configuración de ReactOS ARM Build Environment"
+CAPTION "Configuración de BlastmasterOS ARM Build Environment"
 FONT 8, "MS Shell Dlg"
 BEGIN
   LTEXT "Color de fondo", -1, 10, 10, 75, 12
@@ -120,7 +120,7 @@ BEGIN
   HLP_SAVEBUTTON, "Se activa cuando la configuración ha sido cambiada, cerra guardando los cambios."
   HLP_QUITBUTTON, "Este botón le permite salir de la configuración sin guardar los cambios."
   HLP_DEFAULTMSG, "Situese sobre un control para obtener ayuda."
-  HLP_NOSTRIP,    "Crea información de depuración para el ReactOS Debugger."
+  HLP_NOSTRIP,    "Crea información de depuración para el BlastmasterOS Debugger."
   HLP_VERSION,    "Show the Versions of the RosBE Components."
   HLP_SYSPATH,    "Disable if you use another GCC on your system."
 END

@@ -2,7 +2,7 @@
 # PROJECT:     RosBE - BlastmasterOS Dev Environment for Windows.
 # LICENSE:     GNU General Public License v2. (see LICENSE.txt)
 # FILE:        Root/scut.ps1
-# PURPOSE:     Manages named shortcuts to ReactOS source directories.
+# PURPOSE:     Manages named shortcuts to BlastmasterOS source directories.
 # COPYRIGHT:   Copyright 2026 Daniel Reimer <reimer.daniel@freenet.de>
 #
 
@@ -17,7 +17,8 @@ function parse($arg) {
     if ("$OUT" -ne "Default") {
         if (Test-Path "$OUT\.") {
            set-location $OUT
-            $_ROSBE_ROSSOURCEDIR = $OUT
+            $global:_ROSBE_ROSSOURCEDIR = $OUT
+            $ENV:BLASTMASTEROS_SOURCE_DIR = $OUT
         }
     }
 }

@@ -10,7 +10,7 @@ LANGUAGE LANG_UKRAINIAN, SUBLANG_DEFAULT
 
 ID_DIALOG DIALOGEX DISCARDABLE  0, 0, 260, 220
 STYLE DS_SHELLFONT | DS_MODALFRAME | DS_CENTER | WS_VISIBLE | WS_POPUP | WS_CAPTION | WS_SYSMENU
-CAPTION "Установки змінних компілятора ReactOS"
+CAPTION "Установки змінних компілятора BlastmasterOS"
 FONT 8, "MS Shell Dlg"
 BEGIN
   LTEXT "Колір фону", -1, 10, 10, 75, 12
@@ -37,7 +37,7 @@ END
 
 ID_DIALOG64 DIALOGEX DISCARDABLE  0, 0, 260, 220
 STYLE DS_SHELLFONT | DS_MODALFRAME | DS_CENTER | WS_VISIBLE | WS_POPUP | WS_CAPTION | WS_SYSMENU
-CAPTION "Установки змінних компілятора ReactOS - AMD64"
+CAPTION "Установки змінних компілятора BlastmasterOS - AMD64"
 FONT 8, "MS Shell Dlg"
 BEGIN
   LTEXT "Колір фону", -1, 10, 10, 75, 12
@@ -64,7 +64,7 @@ END
 
 ID_DIALOGARM DIALOGEX DISCARDABLE  0, 0, 260, 220
 STYLE DS_SHELLFONT | DS_MODALFRAME | DS_CENTER | WS_VISIBLE | WS_POPUP | WS_CAPTION | WS_SYSMENU
-CAPTION "Установки змінних компілятора ReactOS - ARM"
+CAPTION "Установки змінних компілятора BlastmasterOS - ARM"
 FONT 8, "MS Shell Dlg"
 BEGIN
   LTEXT "Колір фону", -1, 10, 10, 75, 12
@@ -128,7 +128,7 @@ BEGIN
   HLP_SAVEBUTTON, "Активний стан кнопки вказує на можливість збереження змінених параметрів."
   HLP_QUITBUTTON, "Це кнопка дозволяє вийти з конфігурування без збереження змін."
   HLP_DEFAULTMSG, "Наведіть вказівник миші на елемент керування, щоб отримати довідку."
-  HLP_NOSTRIP,    "Creates debug information for the ReactOS Debugger."
+  HLP_NOSTRIP,    "Creates debug information for the BlastmasterOS Debugger."
   HLP_VERSION,    "Show the Versions of the RosBE Components."
   HLP_SYSPATH,    "Disable if you use another GCC on your system."
 END

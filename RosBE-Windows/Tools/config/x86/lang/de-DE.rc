@@ -120,7 +120,7 @@ BEGIN
   HLP_SAVEBUTTON, "Aktiv, wenn Parameter verändert wurden. Beendet die Anwendung und speichert die Einstellungen."
   HLP_QUITBUTTON, "Dieser Button lässt Sie das Programm, ohne die Konfiguration zu speichern, beenden."
   HLP_DEFAULTMSG, "Bewegen Sie sich über eine Fläche um Hilfe zu erhalten."
-  HLP_NOSTRIP,    "Erzeugt Debuginformation für den ReactOS Debugger."
+  HLP_NOSTRIP,    "Erzeugt Debuginformation für den BlastmasterOS Debugger."
   HLP_VERSION,    "Zeige die Versionen der RosBE Komponenten."
   HLP_SYSPATH,    "Deaktivieren Sie diese Option, wenn Sie einen anderen GCC im System nutzen."
 END

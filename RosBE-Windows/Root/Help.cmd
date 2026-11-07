@@ -20,8 +20,7 @@ if %_ROSBE_DEBUG% == 1 (
 if "%1" == "" (
     echo.
     echo Available Commands:
-    echo    make [OPTIONS]       - Make does a standard build of BlastmasterOS. OPTIONS are
-    echo                           the standard BlastmasterOS build options.
+    echo    make [CMake-target]  - Build a target from the configured BlastmasterOS CMake directory.
     echo    makex [OPTIONS]      - Same as 'make' but automatically determines the
     echo                           number of CPU Cores in the system and uses -j with
     echo                           the appropriate number.
@@ -120,13 +119,10 @@ if "%1" == "" (
     )
 ) else if /i "%1" == "clean" (
     echo Usage: clean [logs]
-    echo Fully clean the BlastmasterOS source directory.
+    echo Runs CMake clean in the configured BlastmasterOS build directory.
     echo.
-    echo    all        - Removes build logs and compiler output in the RosBE-Logs directory.
-    echo    logs       - Removes all build logs in the RosBE-Logs directory.
-    echo    host-tools - Removes just the cmake host tools.
-    echo    All other commands will be parsed as "make module_clean" and cleans the
-    echo    specific module.
+    echo    all  - Same as clean.
+    echo    logs - Removes RosBE build logs when present.
 ) else if /i "%1" == "help" (
     echo Usage: help [COMMAND]
     echo Shows help for the specified command or lists all available commands.

@@ -18,6 +18,7 @@ add|rem|edit|def|list|/?|-h|--help)
 
 	if [ "$_ROSBE_ROSSOURCEDIR" != "Default" ] && [ -d "$_ROSBE_ROSSOURCEDIR" ]; then
 		export _ROSBE_ROSSOURCEDIR
+		export BLASTMASTEROS_SOURCE_DIR="$_ROSBE_ROSSOURCEDIR"
 		basedir
 	fi
 

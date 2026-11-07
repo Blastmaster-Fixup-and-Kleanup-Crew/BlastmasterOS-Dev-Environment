@@ -26,7 +26,8 @@ if "%1" == "" (
 ) else if /i "%1" == "all" (
     call :BIN
 ) else (
-    call :MODULE %*
+    echo ERROR: Per-module cleaning is not exposed by the BlastmasterOS CMake helper.
+    echo Use "clean all" to clean generated build outputs.
 )
 goto :EOC
 

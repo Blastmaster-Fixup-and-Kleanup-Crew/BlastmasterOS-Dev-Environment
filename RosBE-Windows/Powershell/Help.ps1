@@ -12,8 +12,7 @@
 if ("$args" -eq "") {
     ""
     "Available Commands:"
-    "    make [OPTIONS]       - Make does a standard build of BlastmasterOS. OPTIONS are"
-    "                           the standard BlastmasterOS build options."
+    "    make [CMake-target]  - Build a target from the configured BlastmasterOS CMake directory."
     "    makex [OPTIONS]      - Same as 'make' but automatically determines the"
     "                           number of CPU Cores in the system and uses -j with"
     "                           the appropriate number."
@@ -113,13 +112,10 @@ if ("$args" -eq "") {
     }
 } elseif ("$args" -eq "clean") {
     " Usage: clean [logs]"
-    " Fully clean the BlastmasterOS source directory."
+    " Runs CMake clean in the configured BlastmasterOS build directory."
     ""
-    "    all        - Removes build logs and compiler output in the RosBE-Logs directory."
-    "    logs       - Removes all build logs in the RosBE-Logs directory."
-    "    host-tools - Removes just the cmake host tools."
-    "    All other commands will be parsed as ""make ""module""_clean"" and cleans the"
-    "    specific module."
+    "    all  - Same as clean."
+    "    logs - Removes RosBE build logs when present."
 } elseif ("$args" -eq "help") {
     " Usage: help [COMMAND]"
     " Shows help for the specified command or lists all available commands."
