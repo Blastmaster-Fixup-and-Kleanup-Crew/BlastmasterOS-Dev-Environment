@@ -81,6 +81,7 @@ the appropriate RosBE target environment, then follow the source repository's
 configure/build instructions. For example, from the OS source root:
 
 ```bash
+export ROS_ARCH=i386
 ./configure.sh
 cmake --build output-MinGW-i386 --parallel
 ```
