@@ -42,7 +42,15 @@ check_target() {
     echo "$arch target tools (prefix: ${prefix:-<none>}):"
     for tool in "${tools[@]}"; do
         if command -v "${prefix}${tool}" >/dev/null 2>&1; then
-            printf '  OK      %s: %s\n' "${prefix}${tool}" "$(command -v "${prefix}${tool}")"
+            resolved="$(command -v "${prefix}${tool}")"
+            # The unprefixed i386 compiler must come from RosBE, not MSYS2.
+            # Reject the POSIX host compiler in /usr/bin.
+            if [[ "$arch" == i386 && "$tool" =~ ^(gcc|g++)$ && "$resolved" == /usr/bin/* ]]; then
+                printf '  WRONG   %s resolves to MSYS host compiler: %s\n' "${prefix}${tool}" "$resolved"
+                failed=1
+            else
+                printf '  OK      %s: %s\n' "${prefix}${tool}" "$resolved"
+            fi
         else
             printf '  MISSING %s\n' "${prefix}${tool}"
             failed=1
